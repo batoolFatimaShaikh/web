@@ -1,0 +1,533 @@
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap');
+
+/* Basic reset and general styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling with Background Image */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9f9f9;
+  background-size: cover; /* Ensures the background image covers the entire screen */
+  background-position: center; /* Centers the background image */
+  background-repeat: no-repeat; /* Prevents the background image from repeating */
+  color: #333;
+  line-height: 1.6;
+  min-height: 100vh; /* Ensures the body height is at least 100% of the viewport height */
+}
+
+/* Container */
+.container {
+  max-width: 1200px; /* Set maximum width to prevent content from stretching too wide on large screens */
+  margin: 0 auto; /* Center the container on the page */
+  padding: 20px; /* Add some padding around the content */
+  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background to show the background image through */
+  border-radius: 8px; /* Rounded corners for the container */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+}
+  
+  /* Navigation Bar */
+  /* Enhanced Navigation */
+  nav {
+    background-color:#f07d00;
+    padding: 10px 0;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    margin: 0 15px;
+  }
+  
+  nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  nav ul li a:hover {
+    text-decoration: underline;
+  }
+  /* Hero Section */
+ /* Enhanced Hero Section */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-attachment: fixed;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.7));
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+  color: #f0f0f0;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.cta-button {
+  background-color: #f07d00;
+  color: white;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.cta-button:hover {
+  background-color: #e67300;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(240, 125, 0, 0.4);
+}
+
+  
+ /* Enhanced Sections */
+section {
+  padding: 80px 0;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  text-align: center;
+  color: #333;
+}
+
+/* About Us Section */
+#aboutus {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  padding: 60px 40px;
+  margin-top: -60px;
+  position: relative;
+  z-index: 10;
+  text-align: center;
+}
+
+.aboutus-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.aboutus-image {
+  width: 100%;
+  max-width: 45%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+#aboutus p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Tours Section */
+#tours {
+  background-color: #f9f9f9;
+  padding: 80px 0;
+}
+
+.tour-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.tour-card {
+  width: 30%;
+  margin-bottom: 40px;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.tour-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.tour-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.tour-card-content {
+  padding: 20px;
+}
+
+.tour-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.tour-card p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Contact Section */
+#contact {
+  background-color: #fff;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.contact-details {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.contact-link {
+  margin: 0 20px;
+  text-decoration: none;
+  color: #333;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.contact-link:hover {
+  color: #f07d00;
+  transform: translateY(-3px);
+}
+
+.contact-link img {
+  width: 30px;
+  margin-right: 10px;
+}
+
+/* Form Popup */
+body.modal-active {
+  overflow: hidden; /* Prevent scrolling when modal is open */
+  position: relative; /* Create a positioning context for the blur */
+}
+
+body.modal-active::before {
+  content: ''; /* Pseudo-element for the blur */
+  position: fixed; /* Cover the whole screen */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  backdrop-filter: blur(8px); /* Blur effect */
+  z-index: 998; /* Below the form modal */
+}
+
+/* CSS for the form modal */
+#form-popup {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed to stay on the screen */
+  top: 50%; /* Start in the middle of the screen */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust position for perfect centering */
+  z-index: 999; /* Above everything else except the pseudo-element */
+  background-color: white; /* Form background color */
+  padding: 20px; /* Space inside the form */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+  max-width: 500px; /* Maximum width for the form */
+  width: 90%; /* Responsive width */
+}
+
+/* Show the modal when active */
+#form-popup.active {
+  display: block; /* Show the modal */
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+  z-index: 1000; /* Ensure it's on top of the form content */
+}
+
+.close-btn:hover {
+    color: #ff6347; /* Tomato color on hover */
+}
+
+/* Form Elements */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus {
+    border-color: #007bff; /* Change border color on focus */
+    outline: none;
+}
+
+textarea {
+    resize: vertical; /* Allows vertical resizing only */
+}
+
+/* Submit Button */
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff; /* Blue background */
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Back to Top Button */
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+#back-to-top:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .form-popup-content {
+        width: 95%;
+    }
+}
+/* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero h1 {
+      font-size: 3rem;
+  }
+  
+  .hero p {
+      font-size: 1.2rem;
+  }
+  
+  .tour-card {
+      width: 100%;
+  }
+  
+  .contact-details {
+      flex-direction: column;
+  }
+  
+  .contact-link {
+      margin: 10px 0;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-out;
+}
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.5s ease-out;
+}
+/* Testimonials Section */
+#testimonials {
+  background-color: #f0f0f0; /* Light background for differentiation */
+  padding: 60px 20px; /* Section padding */
+  text-align: center; /* Center-align text */
+  animation: fadeInUp 0.8s ease-out; /* Fade-in animation */
+}
+
+#testimonials h2 {
+  font-size: 2.5rem; /* Large font size for heading */
+  color: #333; /* Dark color for heading */
+  margin-bottom: 40px; /* Space below heading */
+}
+
+.testimonial-container {
+  display: flex; /* Flexbox for layout */
+  justify-content: center; /* Center-align testimonials */
+  flex-wrap: wrap; /* Wrap items for responsiveness */
+  gap: 20px; /* Space between testimonials */
+}
+
+.testimonial {
+  background-color: #fff; /* White background for contrast */
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px; /* Internal padding */
+  max-width: 300px; /* Maximum width for each testimonial */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+  flex: 1; /* Flex-grow to ensure responsive width */
+}
+
+.testimonial p {
+  font-style: italic; /* Italicize testimonial text */
+  color: #555; /* Subtle gray color for text */
+  margin-bottom: 15px; /* Space below text */
+}
+
+.testimonial h4 {
+  color: #f07d00; /* Highlighted color for name */
+  font-size: 1.1rem; /* Font size for name */
+}
+
+/* FAQ Section */
+#faq {
+  background-color: #fff; /* White background for FAQ */
+  padding: 60px 20px; /* Section padding */
+  animation: fadeInUp 0.8s ease-out; /* Fade-in animation */
+}
+
+#faq h2 {
+  font-size: 2.5rem; /* Large font size for heading */
+  color: #333; /* Dark color for heading */
+  margin-bottom: 40px; /* Space below heading */
+  text-align: center; /* Center-align heading */
+}
+
+.faq-container {
+  max-width: 800px; /* Maximum width for FAQ container */
+  margin: 0 auto; /* Center-align container */
+}
+
+.faq-item {
+  margin-bottom: 20px; /* Space below each FAQ item */
+  padding: 20px; /* Internal padding */
+  border: 1px solid #ddd; /* Light border for separation */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Subtle shadow effect */
+  background-color: #f9f9f9; /* Light background color */
+}
+
+.faq-item h3 {
+  font-size: 1.4rem; /* Font size for question */
+  color: #f07d00; /* Highlighted color for question */
+  margin-bottom: 10px; /* Space below question */
+}
+
+.faq-item p {
+  font-size: 1rem; /* Font size for answer */
+  color: #555; /* Subtle gray color for text */
+  line-height: 1.6; /* Line height for readability */
+}
